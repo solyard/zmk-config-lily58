@@ -65,26 +65,7 @@
 &kp TAB           &kp Q                &kp W            &kp E              &kp R                &kp T                               &kp Y         &kp U                 &kp I               &kp O             &kp P                    &kp MINUS
 &kp LEFT_SHIFT    &hrm LEFT_CONTROL A  &hrm LEFT_ALT S  &hrm LEFT_SHIFT D  &hrm LEFT_COMMAND F  &kp G                               &kp H         &hrm RIGHT_COMMAND J  &hrm RIGHT_SHIFT K  &hrm RIGHT_ALT L  &hrm RIGHT_CONTROL SEMI  &kp SQT
 &kp LEFT_CONTROL  &kp Z                &kp X            &kp C              &kp V                &kp B        &kp LBKT     &kp RBKT  &kp N         &kp M                 &kp COMMA           &kp DOT           &kp FSLH                 &kp BACKSLASH
-                                                        &kp LALT           &kp LGUI             &lt 1 GRAVE  &kp SPACE    &kp RET   &lt 2 DELETE  &kp BSPC              &kp RGUI
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        lower_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            bindings = <
-&trans     &trans            &trans             &trans             &trans      &trans                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&kp F1     &kp F2            &kp F3             &kp F4             &kp F5      &kp F6                       &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
-&kp GRAVE  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR  &kp PRCNT                    &kp CARET     &kp AMPS      &kp ASTRK     &kp LPAR      &kp RPAR      &kp TILDE
-&trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans      &trans     &trans    &trans  &trans        &kp MINUS     &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE
-                                                &trans             &trans      &trans     &trans    &trans  &trans        &trans        &trans
+                                                        &kp LALT           &kp LGUI             &lt 2 GRAVE  &kp SPACE    &kp RET   &lt 1 DELETE  &kp BSPC              &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -104,6 +85,25 @@
 &kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
 &kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
                            &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        lower_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2       &bt BT_SEL 3       &bt BT_SEL 4  &bt BT_CLR                    &trans     &trans     &trans       &kp LBKT  &kp RBKT    &trans
+&trans        &trans            &trans             &trans             &trans        &trans                        &kp GRAVE  &kp EXCL   &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PRCNT
+&trans        &trans            &trans             &trans             &trans        &trans                        &kp CARET  &kp AMPS   &kp ASTRK    &kp LPAR  &kp RPAR    &kp TILDE
+&trans        &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans      &trans    &trans  &trans     &kp MINUS  &kp PLUS     &kp LBRC  &kp RBRC    &kp PIPE
+                                                   &kp LEFT_CONTROL   &kp LGUI      &trans      &trans    &trans  &kp DOT    &kp COMMA  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
